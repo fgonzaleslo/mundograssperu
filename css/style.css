@@ -77,7 +77,7 @@ a:focus {
 /**********************************/
 .top-bar {
     position: relative;
-    height: 90px;
+    height: 100px;
     /*background: #fdbe33;*/
     background: #e3e2de;
 }
@@ -157,7 +157,7 @@ a:focus {
 .nav-bar {
     position: relative;
     /*background: #fdbe33;*/
-    background: #27cf40;
+    background: #35c171;
     transition: .3s;
 }
 
@@ -177,7 +177,7 @@ a:focus {
 .nav-bar .navbar {
     height: 100%;
     /*background: #030f27 !important;¨*/
-    background: #030f27 !important;
+    background: #35c171 !important;
 }
 
 .navbar-dark .navbar-nav .nav-link,
@@ -190,8 +190,10 @@ a:focus {
 
 .navbar-dark .navbar-nav .nav-link:hover,
 .navbar-dark .navbar-nav .nav-link.active {
-    color: #27cf40;
+    color: #fdbe33;
+    font-weight: bold;
     transition: none;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 .nav-bar .dropdown-menu {
@@ -209,7 +211,7 @@ a:focus {
 
 .nav-bar .btn:hover {
     color: #030f27;
-    background: #029244;
+    background: #35c171;
     border-color: #fdbe33;
 }
 
@@ -388,7 +390,7 @@ a:focus {
     margin-bottom: 45px;
     padding: 90px 0;
     text-align: center;
-    background: #029244;
+    background: #fdbe33;
 }
 
 .page-header h2 {
@@ -2315,3 +2317,72 @@ a:focus {
   from { opacity: 0; transform: scale(0.9); }
   to { opacity: 1; transform: scale(1); }
 }
+
+
+/*************************LOGO*************************/
+/* Sobrescribe los estilos que aplastaban la imagen */
+/* Estilos del logo (se mantienen igual) */
+.top-bar .logo img {
+  max-height: none !important;
+  height: auto !important;
+  width: 75px;
+  animation: girar 10s linear infinite;
+  display: block;
+}
+
+/* Contenedor logo + texto */
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* ESTILO EXACTO como tu imagen */
+.logo-text h3 {
+  color: #35c171 !important;     /* Verde exacto como en la imagen */
+  font-size: 22px;              /* Tamaño exacto */
+  font-weight: 700;             /* Grosor exacto */
+  margin-bottom: 0;             /* Sin margen inferior */
+  font-family: 'Segoe UI', Roboto, sans-serif; /* Fuente similar */
+  letter-spacing: 0.3px;        /* Espaciado preciso */
+  text-shadow: 0.5px 0.5px 1px rgba(0,0,0,0.1); /* Sutil sombra como la imagen */
+}
+
+.logo-text p {
+  color: #f8b932 !important;    /* Gris exacto de la imagen #5D5D5D */
+  font-size: 15px;
+  margin: 0;
+  font-style: italic;
+  font-weight: 500;
+  letter-spacing: 0.2px;
+  font-family: 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Animación del logo */
+@keyframes girar {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Responsive para móviles */
+@media (max-width: 768px) {
+  .logo-container {
+    flex-direction: column;
+    gap: 5px;
+    align-items: flex-start;
+  }
+  
+  .logo-text h3 {
+    font-size: 18px;
+  }
+  
+  .logo-text p {
+    font-size: 13px;
+  }
+}
+
+
+
+
+
+
