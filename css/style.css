@@ -45,7 +45,7 @@ a:focus {
 .back-to-top {
     position: fixed;
     display: none;
-    background: #029244;
+    background: #35c171;
     color: #121518;
     width: 44px;
     height: 44px;
@@ -59,7 +59,7 @@ a:focus {
 }
 
 .back-to-top:hover {
-    color: #029244;
+    color: #35c171;
     background: #121518;
 }
 
@@ -2322,11 +2322,11 @@ a:focus {
 /*************************LOGO*************************/
 /* Sobrescribe los estilos que aplastaban la imagen */
 /* Estilos del logo (se mantienen igual) */
+/* Estilos del logo (sin animación) */
 .top-bar .logo img {
   max-height: none !important;
   height: auto !important;
   width: 75px;
-  animation: girar 10s linear infinite;
   display: block;
 }
 
@@ -2358,12 +2358,6 @@ a:focus {
   font-family: 'Segoe UI', Roboto, sans-serif;
 }
 
-/* Animación del logo */
-@keyframes girar {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
-
 /* Responsive para móviles */
 @media (max-width: 768px) {
   .logo-container {
@@ -2380,7 +2374,6 @@ a:focus {
     font-size: 13px;
   }
 }
-
 
 
 
