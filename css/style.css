@@ -42,6 +42,41 @@ a:focus {
     background: #ffffff;
 }
 
+/* Botón WhatsApp con pulso */
+/* Botón WhatsApp con animación pulso */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+.whatsapp-float {
+    position: fixed;
+    right: 15px;
+    bottom: 15px;
+    background-color: #25D366;
+    color: white;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    font-size: 28px;
+    line-height: 50px;
+    border-radius: 50%;
+    z-index: 999;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: bottom 0.3s ease;
+    animation: pulse 2s infinite;
+}
+
+.whatsapp-float.above-back-to-top {
+    bottom: 70px;
+}
+
+.whatsapp-float:hover {
+    background-color: #128C7E;
+}
+
+/* Botón volver arriba */
 .back-to-top {
     position: fixed;
     display: none;
@@ -55,7 +90,9 @@ a:focus {
     right: 15px;
     bottom: 15px;
     transition: background 0.5s;
-    z-index: 9;
+    z-index: 998;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .back-to-top:hover {
@@ -157,7 +194,7 @@ a:focus {
 .nav-bar {
     position: relative;
     /*background: #fdbe33;*/
-    background: #35c171;
+    background: #0C3;
     transition: .3s;
 }
 
@@ -177,7 +214,7 @@ a:focus {
 .nav-bar .navbar {
     height: 100%;
     /*background: #030f27 !important;¨*/
-    background: #35c171 !important;
+    background: #0C3 !important;
 }
 
 .navbar-dark .navbar-nav .nav-link,
@@ -255,6 +292,28 @@ a:focus {
     .nav-bar .btn {
         display: none;
     }
+}
+
+.nav-icon {
+    color: #ffffff;
+    margin-right: 6px;
+    font-size: 13px;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Cuando el enlace está activo o con hover */
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link.active {
+    color: #fdbe33;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Solo afecta la hojita cuando el <a> está activo o en hover */
+.navbar-dark .navbar-nav .nav-link:hover .nav-icon,
+.navbar-dark .navbar-nav .nav-link.active .nav-icon {
+    color: #fdbe33;
+    transform: rotate(-15deg) scale(1.2);
 }
 
 
@@ -511,7 +570,7 @@ a:focus {
     
 .feature .col-md-12:nth-child(2n) {
     color: #030f27;
-    background: #029244;
+    background: #0C3;
 }
 
 .feature .feature-item {
@@ -1945,7 +2004,7 @@ a:focus {
 }
 
 .contact .col-md-6:last-child {
-    background: #029244;
+    background: #35c171;
 }
 
 .contact .contact-info {
@@ -2093,7 +2152,7 @@ a:focus {
     background: #fdbe33;
 }
 
-.footer .footer-link a {
+/*.footer .footer-link a {
     display: block;
     margin-bottom: 10px;
     color: #ffffff;
@@ -2111,6 +2170,36 @@ a:focus {
 .footer .footer-link a:hover {
     color: #fdbe33;
     letter-spacing: 1px;
+}*/
+
+.footer .footer-link a {
+    display: block;
+    margin-bottom: 10px;
+    color: #ffffff;
+    transition: color 0.3s, letter-spacing 0.3s;
+    position: relative;
+    padding-left: 24px; /* Espacio para la hoja */
+}
+
+.footer .footer-link a::before {
+    content: "\f06c"; /* Código del ícono fa-leaf */
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    color: #35c171; /* Color verde natural */
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 14px;
+    transition: transform 0.3s ease;
+}
+
+.footer .footer-link a:hover {
+    color: #fdbe33;
+    letter-spacing: 1px;
+}
+
+.footer .footer-link a:hover::before {
+    transform: rotate(-15deg) scale(1.2);
 }
 
 .footer .footer-contact p i {
@@ -2133,9 +2222,15 @@ a:focus {
     transition: .3s;
 }
 
+.footer-contact p i {
+  color: #0C3; /* Verde institucional */
+  margin-right: 8px;
+}
+
+
 .footer .footer-social a i {
     font-size: 15px;
-    color: #ffffff;
+    color: #0C3;
 }
 
 .footer .footer-social a:hover {
@@ -2244,7 +2339,7 @@ a:focus {
 /*******MODAL****************/
 .btn {
   padding: 10px 20px;
-  background-color: #029244;
+  background-color: #0C3;
   color: white;
   text-decoration: none;
   border-radius: 5px;
@@ -2252,7 +2347,7 @@ a:focus {
   transition: background-color 0.3s ease;
 }
 .btn:hover {
-  background-color: #026f35;
+  background-color: #0C3;
 }
 
 .modal {
@@ -2291,7 +2386,7 @@ a:focus {
 
 .mission {
   background-color: #e1f3eb;
-  border-left: 5px solid #029244;
+  border-left: 5px solid #0C3;
 }
 
 .vision {
@@ -2300,7 +2395,7 @@ a:focus {
 }
 
 .modal-section h2 {
-  color: #029244;
+  color: #0C3;
   margin-bottom: 10px;
 }
 
@@ -2316,6 +2411,30 @@ a:focus {
 @keyframes fadeIn {
   from { opacity: 0; transform: scale(0.9); }
   to { opacity: 1; transform: scale(1); }
+}
+
+.leaf-icon {
+  color: #d6f0ff; /* verde institucional */
+  margin-right: 8px;
+  font-size: 18px;
+  vertical-align: middle;
+  transition: transform 0.3s ease;
+}
+
+.mission h2:hover .leaf-icon,
+.vision h2:hover .leaf-icon {
+  transform: rotate(-15deg) scale(1.2);
+}
+
+.modal-section h2 {
+  color: #0C3;
+  margin-bottom: 15px;
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.15); /* Sutil sombra */
+  display: flex;
+  align-items: center;
 }
 
 
@@ -2339,15 +2458,20 @@ a:focus {
 
 /* ESTILO EXACTO como tu imagen */
 .logo-text h3 {
-  color: #35c171 !important;     /* Verde exacto como en la imagen */
-  font-size: 22px;              /* Tamaño exacto */
-  font-weight: 700;             /* Grosor exacto */
-  margin-bottom: 0;             /* Sin margen inferior */
-  font-family: 'Segoe UI', Roboto, sans-serif; /* Fuente similar */
-  letter-spacing: 0.3px;        /* Espaciado preciso */
-  text-shadow: 0.5px 0.5px 1px rgba(0,0,0,0.1); /* Sutil sombra como la imagen */
+  color: #0C3 !important;       /* Verde exacto */
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 0;
+  font-family: 'Segoe UI', Roboto, sans-serif;
+  letter-spacing: 0.3px;
+  text-shadow: 0.5px 0.5px 1px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, text-shadow 0.2s ease;
 }
 
+.logo-text h3:hover {
+  transform: scale(1.05);  /* Ligeramente más grande */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);  /* Más realce */
+}
 .logo-text p {
   color: #f8b932 !important;    /* Gris exacto de la imagen #5D5D5D */
   font-size: 15px;

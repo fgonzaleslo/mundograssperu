@@ -22,6 +22,8 @@
         <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
         <link href="lib/slick/slick.css" rel="stylesheet">
         <link href="lib/slick/slick-theme.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
 
         <!-- Template Stylesheet -->
         <link href="css/style.css" rel="stylesheet">
@@ -103,10 +105,15 @@
                         </button>
 
                         <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
-                            <div class="navbar-nav mr-auto">
+                            <!--<div class="navbar-nav mr-auto">
                                 <a href="index.html" class="nav-item nav-link">Inicio</a>
                                 <a href="about.html" class="nav-item nav-link active">Nosotros</a>
                                 <a href="contact.html" class="nav-item nav-link">Contacto</a>
+                            </div>-->
+                            <div class="navbar-nav mr-auto">
+                                <a href="index.html" class="nav-item nav-link"><i class="fas fa-leaf nav-icon"></i> Inicio</a>
+                                <a href="about.html" class="nav-item nav-link active"><i class="fas fa-leaf nav-icon"></i> Nosotros</a>
+                                <a href="contact.html" class="nav-item nav-link"><i class="fas fa-leaf nav-icon"></i> Contacto</a>
                             </div>
                             <!--<div class="ml-auto">
                                 <a class="btn" href="#">Get A Quote</a>
@@ -127,7 +134,7 @@
                         </div>
                         <div class="col-12">
                             <a href="index.html">Inicio</a>
-                            <a href="about.html">Nostros Us</a>
+                            <a href="about.html">Nosotros</a>
                         </div>
                     </div>
                 </div>
@@ -147,14 +154,14 @@
                         <div class="col-lg-7 col-md-6">
                             <div class="section-header text-left">
                                 <p>Bienvenido a Mundo Grass Perú</p>
-                                <h2>10 años de experiencia</h2>
+                                <h2>20 años de experiencia</h2>
                             </div>
                             <div class="about-text">
                                 <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulputate. Aliquam metus tortor, auctor id gravida condimentum, viverra quis sem.
+                                    Diseñamos espacios verdes e infraestructuras sostenibles que promueven el cuidado del medio ambiente. Aplicamos técnicas como la biomimética, la permacultura y la construcción ecológica para lograr proyectos eficientes y armónicos con la naturaleza.
                                 </p>
                                 <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulputate. Aliquam metus tortor, auctor id gravida condimentum, viverra quis sem. Curabitur non nisl nec nisi scelerisque maximus. Aenean consectetur convallis porttitor. Aliquam interdum at lacus non blandit.
+                                    Desarrollamos planos paisajísticos, instalamos sistemas de riego tecnificado y ejecutamos proyectos completos de plantas de tratamiento de agua bajo la modalidad llave en mano. También nos encargamos de la plantación, mantenimiento y conservación de áreas verdes. Gestionamos la salud de los árboles, bosques urbanos, y brindamos asesoría especializada en la producción, traslado y manejo de especies arbóreas y palmeras.
                                 </p>
                                 <!--<a class="btn" href="index.html">Visión y Misión</a>-->
                                 <a class="btn" href="#" onclick="event.preventDefault(); openModal();">Visión y Misión</a>
@@ -171,11 +178,11 @@
                     <span class="custom-close" onclick="closeModal()">&times;</span>
                     <div class="custom-modal-columns">
                         <div class="custom-modal-section mission">
-                            <h2>Misión</h2>
+                            <h2><i class="fas fa-leaf leaf-icon"></i> Misión</h2>
                             <p>Ofrecer productos y servicios de calidad, comprometidos con el desarrollo sostenible y la satisfacción de nuestros clientes.</p>
                         </div>
                         <div class="custom-modal-section vision">
-                            <h2>Visión</h2>
+                            <h2><i class="fas fa-leaf leaf-icon"></i> Visión</h2>
                             <p>Ser líderes en nuestro sector, reconocidos por la excelencia, innovación y responsabilidad ambiental en todas nuestras actividades.</p>
                         </div>
                     </div>
@@ -462,8 +469,27 @@
 </div>
             <!-- Footer End -->
 
-            <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
-        </div>
+                       <!-- Botón WhatsApp -->
+<!-- WhatsApp debe ir DESPUÉS para asegurar que quede arriba -->
+<a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+<a href="https://wa.me/51983150994" class="whatsapp-float" target="_blank">
+  <i class="fab fa-whatsapp"></i>
+</a>
+</div>
+<script>
+  const backToTop = document.querySelector('.back-to-top');
+  const whatsappBtn = document.querySelector('.whatsapp-float');
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 100) {
+      backToTop.style.display = 'block';
+      whatsappBtn.classList.add('above-back-to-top');
+    } else {
+      backToTop.style.display = 'none';
+      whatsappBtn.classList.remove('above-back-to-top');
+    }
+  });
+</script>
 
         <!-- ESTILOS DEL MODAL -->
         <style>
@@ -497,7 +523,7 @@
             right: 20px;
             font-size: 28px;
             cursor: pointer;
-            color: #029244;
+            color: #0C3;
         }
 
         .custom-modal-columns {
@@ -515,11 +541,11 @@
         }
 
         .custom-modal-section.mission {
-            background-color: #029244;
+            background-color: #0C3;
         }
 
         .custom-modal-section.vision {
-            background-color: #036f34;
+            background-color: #0C3;
         }
 
         .custom-modal-section h2 {

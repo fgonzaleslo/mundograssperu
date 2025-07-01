@@ -22,6 +22,8 @@
         <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
         <link href="lib/slick/slick.css" rel="stylesheet">
         <link href="lib/slick/slick-theme.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+        
 
         <!-- Template Stylesheet -->
         <link href="css/style.css" rel="stylesheet">
@@ -107,10 +109,15 @@
                         </button>
 
                         <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
-                            <div class="navbar-nav mr-auto">
+                            <!--<div class="navbar-nav mr-auto">
                                 <a href="index.html" class="nav-item nav-link active">Inicio</a>
                                 <a href="about.html" class="nav-item nav-link">Nosotros</a>
                                 <a href="contact.html" class="nav-item nav-link">Contacto</a>
+                            </div>-->
+                            <div class="navbar-nav mr-auto">
+                                <a href="index.html" class="nav-item nav-link active"><i class="fas fa-leaf nav-icon"></i> Inicio</a>
+                                <a href="about.html" class="nav-item nav-link"><i class="fas fa-leaf nav-icon"></i> Nosotros</a>
+                                <a href="contact.html" class="nav-item nav-link"><i class="fas fa-leaf nav-icon"></i> Contacto</a>
                             </div>
                             <!--<div class="ml-auto">
                                 <a class="btn" href="#">Get A Quote</a>
@@ -131,13 +138,21 @@
                 </ol>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
+                        <img src="img/portada1.jpg" alt="Carousel Image">
+                        <div class="carousel-caption">
+                            <p class="animated fadeInRight">Somos Profesionales</p>
+                            <h1 class="animated fadeInLeft">Transformamos Espacios en Naturaleza Viva</h1>
+                            <a class="btn animated fadeInUp" href="contact.html">Contactar</a>
+                        </div>
+                    </div>
+                    <!--<div class="carousel-item active">
                         <img src="img/Sistema_riego_aspersores1.jpeg" alt="Carousel Image">
                         <div class="carousel-caption">
                             <p class="animated fadeInRight">Somos Profesionales</p>
                             <h1 class="animated fadeInLeft">Sistema de Riego de Aspersores</h1>
                             <a class="btn animated fadeInUp" href="contact.html">Contactar</a>
                         </div>
-                    </div>
+                    </div>-->
 
                     <div class="carousel-item">
                         <img src="img/Sistema_riego_tecnificado1.jpeg" alt="Carousel Image">
@@ -149,7 +164,7 @@
                     </div>
 
                     <div class="carousel-item">
-                        <img src="img/Incorporacion_bitumin.jpeg" alt="Carousel Image">
+                        <img src="img/portada2.jpg" alt="Carousel Image">
                         <div class="carousel-caption">
                             <p class="animated fadeInRight">Somos Profesionales</p>
                             <h1 class="animated fadeInLeft">Instalación de Manta Asfaltica</h1>
@@ -229,10 +244,10 @@
                             </div>
                             <div class="about-text">
                                 <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulputate. Aliquam metus tortor, auctor id gravida condimentum, viverra quis sem.
+                                    Diseñamos espacios verdes e infraestructuras sostenibles que promueven el cuidado del medio ambiente. Aplicamos técnicas como la biomimética, la permacultura y la construcción ecológica para lograr proyectos eficientes y armónicos con la naturaleza.
                                 </p>
                                 <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulputate. Aliquam metus tortor, auctor id gravida condimentum, viverra quis sem. Curabitur non nisl nec nisi scelerisque maximus. Aenean consectetur convallis porttitor. Aliquam interdum at lacus non blandit.
+                                    Desarrollamos planos paisajísticos, instalamos sistemas de riego tecnificado y ejecutamos proyectos completos de plantas de tratamiento de agua bajo la modalidad llave en mano. También nos encargamos de la plantación, mantenimiento y conservación de áreas verdes. Gestionamos la salud de los árboles, bosques urbanos, y brindamos asesoría especializada en la producción, traslado y manejo de especies arbóreas y palmeras.
                                 </p>
                                 <a class="btn" href="about.html">Nosotros</a>
                             </div>
@@ -834,7 +849,7 @@
                                 <h2>Oficina de Contacto</h2>
                                 <p><i class="fa fa-map-marker-alt"></i>123 calle, Lima, Perú</p>
                                 <p><i class="fa fa-phone-alt"></i>+51 983 150 994</p>
-                                <p><i class="fa fa-envelope"></i>flavio.gonzales95@gmail.com</p>
+                                <p><i class="fa fa-envelope"></i>ventas@mundograssperu.com</p>
                                 <div class="footer-social">
                                     <!--<a href=""><i class="fab fa-twitter"></i></a>-->
                                     <a href="https://www.facebook.com/people/Mundo-Grass-Per%C3%BA/100063641795577/?locale=es_LA" target="_blank">
@@ -908,8 +923,27 @@
 </div>
             <!-- Footer End -->
 
-            <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
-        </div>
+                       <!-- Botón WhatsApp -->
+<!-- WhatsApp debe ir DESPUÉS para asegurar que quede arriba -->
+<a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+<a href="https://wa.me/51983150994" class="whatsapp-float" target="_blank">
+  <i class="fab fa-whatsapp"></i>
+</a>
+</div>
+<script>
+  const backToTop = document.querySelector('.back-to-top');
+  const whatsappBtn = document.querySelector('.whatsapp-float');
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 100) {
+      backToTop.style.display = 'block';
+      whatsappBtn.classList.add('above-back-to-top');
+    } else {
+      backToTop.style.display = 'none';
+      whatsappBtn.classList.remove('above-back-to-top');
+    }
+  });
+</script>
 
         <!-- JavaScript Libraries -->
         <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
