@@ -254,7 +254,7 @@ a:focus {
 
 .nav-bar .btn:hover {
     color: #030f27;
-    background: #87e63a;
+    background: #86da3c;
     border-color: #fdbe33;
 }
 
@@ -542,7 +542,7 @@ a:focus {
 }
 
 .section-header p {
-    color: #87e63a;
+    color: #86da3c;
     font-size: 22px;
     font-weight: 600;
     margin-bottom: 5px;
@@ -571,12 +571,12 @@ a:focus {
 }
 
 .feature .col-md-12 {
-    background: #87e63a;
+    background: #86da3c;
 }
     
 .feature .col-md-12:nth-child(2n) {
-    color: #87e63a;
-    background: #87e63a;
+    color: #86da3c;
+    background: #86da3c;
 }
 
 .feature .feature-item {
@@ -614,13 +614,13 @@ a:focus {
     height: 79px;
     top: -18px;
     left: -9px;
-    background: #87e63a;
+    background: #86da3c;
     border-radius: 60px;
     z-index: 2;
 }
 
 .feature .col-md-12:nth-child(2n) .feature-icon::after {
-    background: #87e63a;
+    background: #86da3c;
 }
 
 .feature .feature-icon [class^="flaticon-"]::before {
@@ -768,7 +768,7 @@ a:focus {
 
 .fact .fact-left {
     color: #030f27;
-    background: #87e63a;
+    background: #86da3c;
 }
 
 .fact .fact-right {
@@ -834,7 +834,7 @@ a:focus {
     display: flex;
     align-items: center;
     height: 60px;
-    background: #87e63a;
+    background: #86da3c;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -2011,7 +2011,7 @@ a:focus {
 }
 
 .contact .col-md-6:last-child {
-    background: #87e63a;
+    background: linear-gradient(to bottom, #E3EF26, #076653) !important;
 }
 
 .contact .contact-info {
@@ -2192,7 +2192,7 @@ a:focus {
     content: "\f06c"; /* Código del ícono fa-leaf */
     font-family: "Font Awesome 5 Free";
     font-weight: 900;
-    color: #87e63a; /* Color verde natural */
+    color: #86da3c; /* Color verde natural */
     position: absolute;
     left: 0;
     top: 0;
@@ -2230,14 +2230,14 @@ a:focus {
 }
 
 .footer-contact p i {
-  color: #87e63a; /* Verde institucional */
+  color: #86da3c; /* Verde institucional */
   margin-right: 8px;
 }
 
 
 .footer .footer-social a i {
     font-size: 15px;
-    color: #87e63a;
+    color: #86da3c;
 }
 
 .footer .footer-social a:hover {
@@ -2346,7 +2346,7 @@ a:focus {
 /*******MODAL****************/
 .btn {
   padding: 10px 20px;
-  background-color: #87e63a;
+  background-color: #86da3c;
   color: white;
   text-decoration: none;
   border-radius: 5px;
@@ -2354,7 +2354,7 @@ a:focus {
   transition: background-color 0.3s ease;
 }
 .btn:hover {
-  background-color: #87e63a;
+  background-color: #86da3c;
 }
 
 .modal {
@@ -2393,7 +2393,7 @@ a:focus {
 
 .mission {
   background-color: #e1f3eb;
-  border-left: 5px solid #87e63a;
+  border-left: 5px solid #86da3c;
 }
 
 .vision {
@@ -2402,7 +2402,7 @@ a:focus {
 }
 
 .modal-section h2 {
-  color: #87e63a;
+  color: #86da3c;
   margin-bottom: 10px;
 }
 
@@ -2434,7 +2434,7 @@ a:focus {
 }
 
 .modal-section h2 {
-  color: #87e63a;
+  color: #86da3c;
   margin-bottom: 15px;
   font-size: 24px;
   font-weight: 700;
@@ -2466,7 +2466,7 @@ a:focus {
 
 /* ESTILO EXACTO como tu imagen */
 .logo-text h3 {
-  color: #87e63a !important;       /* Verde exacto */
+  color: #87e63c !important;       /* Verde exacto */
   font-size: 22px;
   font-weight: 700;
   margin-bottom: 0;
