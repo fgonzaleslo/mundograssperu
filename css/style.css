@@ -196,7 +196,7 @@ a:focus {
 .nav-bar {
     position: relative;
     /*background: #fdbe33;*/
-    background: #87e63a;
+    background: linear-gradient(to bottom, #E3EF26, #076653) !important;
     transition: .3s;
 }
 
@@ -213,11 +213,15 @@ a:focus {
     z-index: 999;
 }
 
+/*.nav-bar .navbar {
+    height: 100%;
+    background: #87e63a !important;
+}*/
 .nav-bar .navbar {
     height: 100%;
-    /*background: #030f27 !important;¨*/
-    background: #87e63a !important;
+    background: linear-gradient(to bottom, #E3EF26, #076653) !important;
 }
+
 
 .navbar-dark .navbar-nav .nav-link,
 .navbar-dark .navbar-nav .nav-link:focus,
