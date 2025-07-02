@@ -3,6 +3,7 @@
 /*******************************/
 body {
     color: #666666;
+    /*background: #dddddd;*/
     background: #dddddd;
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
@@ -25,7 +26,7 @@ a {
 a:hover,
 a:active,
 a:focus {
-    color: #fdbe33;
+    color: #FF7B25;
     outline: none;
     text-decoration: none;
 }
@@ -116,7 +117,8 @@ a:focus {
     position: relative;
     height: 100px;
     /*background: #fdbe33;*/
-    background: #e3e2de;
+    /*background: #e3e2de;*/
+    background: #fffefb;
 }
 
 .top-bar .logo {
@@ -194,7 +196,7 @@ a:focus {
 .nav-bar {
     position: relative;
     /*background: #fdbe33;*/
-    background: #0C3;
+    background: #87e63a;
     transition: .3s;
 }
 
@@ -214,7 +216,7 @@ a:focus {
 .nav-bar .navbar {
     height: 100%;
     /*background: #030f27 !important;¨*/
-    background: #0C3 !important;
+    background: #87e63a !important;
 }
 
 .navbar-dark .navbar-nav .nav-link,
@@ -248,7 +250,7 @@ a:focus {
 
 .nav-bar .btn:hover {
     color: #030f27;
-    background: #35c171;
+    background: #87e63a;
     border-color: #fdbe33;
 }
 
@@ -536,8 +538,8 @@ a:focus {
 }
 
 .section-header p {
-    color: #029244;
-    font-size: 18px;
+    color: #87e63a;
+    font-size: 22px;
     font-weight: 600;
     margin-bottom: 5px;
 }
@@ -565,12 +567,12 @@ a:focus {
 }
 
 .feature .col-md-12 {
-    background: #030f27;
+    background: #87e63a;
 }
     
 .feature .col-md-12:nth-child(2n) {
-    color: #030f27;
-    background: #0C3;
+    color: #87e63a;
+    background: #87e63a;
 }
 
 .feature .feature-item {
@@ -596,8 +598,8 @@ a:focus {
     height: 80px;
     top: -20px;
     left: -10px;
-    border: 2px dotted #ffffff;
-    border-radius: 60px;
+    border: 2px dotted #ffaf03;
+    border-radius: 80px;
     z-index: 1;
 }
 
@@ -608,19 +610,19 @@ a:focus {
     height: 79px;
     top: -18px;
     left: -9px;
-    background: #030f27;
+    background: #87e63a;
     border-radius: 60px;
     z-index: 2;
 }
 
 .feature .col-md-12:nth-child(2n) .feature-icon::after {
-    background: #fdbe33;
+    background: #87e63a;
 }
 
 .feature .feature-icon [class^="flaticon-"]::before {
     position: relative;
     margin: 0;
-    color: #fdbe33;
+    color: #030f27;
     font-size: 60px;
     line-height: 60px;
     z-index: 3;
@@ -632,14 +634,15 @@ a:focus {
 
 .feature .feature-text h3 {
     margin: 0 0 10px 0;
-    color: #fdbe33;
+    /*color: #030f27;*/
+    color: #030f27;
     font-size: 25px;
     font-weight: 600;
 }
 
 .feature .feature-text p {
     margin: 0;
-    color: #fdbe33;
+    color: #030f27;
     font-size: 18px;
     font-weight: 400;
 }
@@ -732,7 +735,7 @@ a:focus {
     margin: 0;
     font-size: 60px;
     line-height: 60px;
-    background-image: linear-gradient(#ffffff, #fdbe33);
+    background-image: linear-gradient(#ffffff, #030f27);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -760,8 +763,8 @@ a:focus {
 }
 
 .fact .fact-left {
-    color: #fdbe33;
-    background: #030f27;
+    color: #030f27;
+    background: #87e63a;
 }
 
 .fact .fact-right {
@@ -770,7 +773,7 @@ a:focus {
 }
 
 .fact .fact-left h2 {
-    color: #fdbe33;
+    color: #030f27;
 }
 
 
@@ -827,7 +830,7 @@ a:focus {
     display: flex;
     align-items: center;
     height: 60px;
-    background: #030f27;
+    background: #87e63a;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -839,7 +842,7 @@ a:focus {
     width: calc(100% - 60px);
     font-size: 20px;
     font-weight: 700;
-    color: #fdbe33;
+    color: #030f27;
     text-align: left;
     overflow: hidden;
     white-space: nowrap;
@@ -1201,7 +1204,7 @@ a:focus {
     margin: 45px 0;
     padding: 90px 0;
     text-align: center;
-    background: linear-gradient(rgba(3, 15, 39, .9), rgba(3, 15, 39, .9)), url(../img/Sistema_riego_aspersores1.jpeg);
+    background: linear-gradient(rgba(135, 230, 58, 1), rgba(3, 15, 39, .9)), url(../img/Sistema_riego_aspersores1.jpeg);
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -2004,7 +2007,7 @@ a:focus {
 }
 
 .contact .col-md-6:last-child {
-    background: #35c171;
+    background: #87e63a;
 }
 
 .contact .contact-info {
@@ -2185,7 +2188,7 @@ a:focus {
     content: "\f06c"; /* Código del ícono fa-leaf */
     font-family: "Font Awesome 5 Free";
     font-weight: 900;
-    color: #35c171; /* Color verde natural */
+    color: #87e63a; /* Color verde natural */
     position: absolute;
     left: 0;
     top: 0;
@@ -2223,14 +2226,14 @@ a:focus {
 }
 
 .footer-contact p i {
-  color: #0C3; /* Verde institucional */
+  color: #87e63a; /* Verde institucional */
   margin-right: 8px;
 }
 
 
 .footer .footer-social a i {
     font-size: 15px;
-    color: #0C3;
+    color: #87e63a;
 }
 
 .footer .footer-social a:hover {
@@ -2339,7 +2342,7 @@ a:focus {
 /*******MODAL****************/
 .btn {
   padding: 10px 20px;
-  background-color: #0C3;
+  background-color: #87e63a;
   color: white;
   text-decoration: none;
   border-radius: 5px;
@@ -2347,7 +2350,7 @@ a:focus {
   transition: background-color 0.3s ease;
 }
 .btn:hover {
-  background-color: #0C3;
+  background-color: #87e63a;
 }
 
 .modal {
@@ -2386,7 +2389,7 @@ a:focus {
 
 .mission {
   background-color: #e1f3eb;
-  border-left: 5px solid #0C3;
+  border-left: 5px solid #87e63a;
 }
 
 .vision {
@@ -2395,7 +2398,7 @@ a:focus {
 }
 
 .modal-section h2 {
-  color: #0C3;
+  color: #87e63a;
   margin-bottom: 10px;
 }
 
@@ -2427,7 +2430,7 @@ a:focus {
 }
 
 .modal-section h2 {
-  color: #0C3;
+  color: #87e63a;
   margin-bottom: 15px;
   font-size: 24px;
   font-weight: 700;
@@ -2445,8 +2448,9 @@ a:focus {
 .top-bar .logo img {
   max-height: none !important;
   height: auto !important;
-  width: 75px;
+  width: 95px;
   display: block;
+  margin-top: -10px; /* <-- Subir el logo */
 }
 
 /* Contenedor logo + texto */
@@ -2458,7 +2462,7 @@ a:focus {
 
 /* ESTILO EXACTO como tu imagen */
 .logo-text h3 {
-  color: #0C3 !important;       /* Verde exacto */
+  color: #87e63a !important;       /* Verde exacto */
   font-size: 22px;
   font-weight: 700;
   margin-bottom: 0;
@@ -2473,7 +2477,7 @@ a:focus {
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);  /* Más realce */
 }
 .logo-text p {
-  color: #f8b932 !important;    /* Gris exacto de la imagen #5D5D5D */
+  color: #fdbe33 !important;    /* Gris exacto de la imagen #5D5D5D */
   font-size: 15px;
   margin: 0;
   font-style: italic;
