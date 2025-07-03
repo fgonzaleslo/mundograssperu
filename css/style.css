@@ -882,7 +882,8 @@ a:focus {
     margin: 45px 0;
     height: 100%;
     min-height: 500px;
-    background: linear-gradient(rgba(3, 15, 39, .9), rgba(3, 15, 39, .9)), url(../img/Sistema_riego_aspersores1.jpeg);
+    /*background: linear-gradient(rgba(3, 15, 39, .9), rgba(3, 15, 39, .9)), url(../img/Sistema_riego_aspersores1.jpeg);*/
+    background: linear-gradient(to bottom, rgba(227, 239, 38, 0.9), rgba(7, 102, 83, 0.9)), url(../img/Sistema_riego_aspersores1.jpeg) !important;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -2506,6 +2507,60 @@ a:focus {
     font-size: 13px;
   }
 }
+
+
+.whatsapp-hint {
+  position: fixed;
+  bottom: 130px; /* ⬆️ Aumentamos espacio respecto al ícono */
+  right: 25px; /* Alineado con el ícono */
+  background: #25d366;
+  color: white;
+  padding: 12px 18px;
+  border-radius: 15px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+  font-size: 14px;
+  z-index: 9999;
+  display: none;
+  cursor: pointer;
+  max-width: 260px;
+  text-align: left;
+  animation: slideInRight 0.4s ease forwards;
+}
+
+.whatsapp-hint strong {
+  font-size: 15px;
+  display: block;
+}
+
+.whatsapp-hint small {
+  font-size: 13px;
+  opacity: 0.9;
+}
+
+/* Animación */
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes vibrar {
+  0%, 100% { transform: translateX(0); }
+  20% { transform: translateX(-2px); }
+  40% { transform: translateX(2px); }
+  60% { transform: translateX(-2px); }
+  80% { transform: translateX(2px); }
+}
+
+.whatsapp-float.vibrando {
+  animation: vibrar 0.5s ease-in-out;
+}
+
+
 
 
 

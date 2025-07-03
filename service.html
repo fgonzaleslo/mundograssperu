@@ -522,8 +522,12 @@
             <a href="https://wa.me/51983150994" class="whatsapp-float" target="_blank">
             <i class="fab fa-whatsapp"></i>
             </a>
+            <div id="whatsappHint" class="whatsapp-hint">
+                <strong id="whatsappHintTitle">💬 Consultar sobre el servicio</strong><br>
+                <small id="whatsappHintExtra">¡No pierdas esta oportunidad!</small>
+            </div>
         </div>
-        <script>
+        <!--<script>
   const backToTop = document.querySelector('.back-to-top');
   const whatsappBtn = document.querySelector('.whatsapp-float');
 
@@ -536,7 +540,52 @@
       whatsappBtn.classList.remove('above-back-to-top');
     }
   });
+</script>-->
+
+<script>
+  const backToTop = document.querySelector('.back-to-top');
+  const whatsappBtn = document.querySelector('.whatsapp-float');
+  const hint = document.getElementById('whatsappHint');
+  const hintTitle = document.getElementById('whatsappHintTitle');
+  const hintExtra = document.getElementById('whatsappHintExtra');
+
+  // Mostrar/ocultar botón y clase al hacer scroll
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 100) {
+      backToTop.style.display = 'block';
+      whatsappBtn.classList.add('above-back-to-top');
+    } else {
+      backToTop.style.display = 'none';
+      whatsappBtn.classList.remove('above-back-to-top');
+    }
+  });
+
+  // Mostrar cartel con título del servicio al pasar mouse y vibrar ícono
+  document.querySelectorAll('.service-item').forEach(item => {
+    item.addEventListener('mouseenter', () => {
+      const title = item.querySelector('h3')?.innerText || 'nuestro servicio';
+      hintTitle.innerText = `💬 Consultar sobre ${title}`;
+      hintExtra.innerText = '¡No pierdas esta oportunidad!';
+      hint.style.display = 'block';
+
+      // Efecto vibración del ícono de WhatsApp
+      whatsappBtn.classList.add('vibrando');
+      setTimeout(() => {
+        whatsappBtn.classList.remove('vibrando');
+      }, 500);
+    });
+
+    item.addEventListener('mouseleave', () => {
+      hint.style.display = 'none';
+    });
+  });
+
+  // Al hacer clic en el cartel, redirigir a WhatsApp
+  hint.addEventListener('click', () => {
+    window.open('https://wa.me/51983150994', '_blank');
+  });
 </script>
+
 
         <!-- JavaScript Libraries -->
         <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
