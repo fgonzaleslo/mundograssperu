@@ -300,11 +300,37 @@ a:focus {
     }
 }
 
-.nav-icon {
+/*.nav-icon {
     color: #ffffff;
     margin-right: 6px;
     font-size: 13px;
     transition: transform 0.3s ease, color 0.3s ease;
+}*/
+
+/* Cuando el enlace está activo o con hover */
+/*.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link.active {
+    color: #fdbe33;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}*/
+
+/* Solo afecta la hojita cuando el <a> está activo o en hover */
+/*.navbar-dark .navbar-nav .nav-link:hover .nav-icon,
+.navbar-dark .navbar-nav .nav-link.active .nav-icon {
+    color: #fdbe33;
+    transform: rotate(-15deg) scale(1.2);
+}*/
+
+/* Antes: .nav-icon —> Ahora: .nav-dot */
+.nav-dot {
+    display: inline-block;
+    width: 10px;           /* Tamaño aproximado al ícono de 13px */
+    height: 10px;
+    background-color: #ffffff;  /* Igual que .nav-icon color */
+    border-radius: 50%;     /* Hace que sea un círculo */
+    margin-right: 6px;      /* Igual que .nav-icon */
+    transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 /* Cuando el enlace está activo o con hover */
@@ -315,12 +341,13 @@ a:focus {
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
-/* Solo afecta la hojita cuando el <a> está activo o en hover */
-.navbar-dark .navbar-nav .nav-link:hover .nav-icon,
-.navbar-dark .navbar-nav .nav-link.active .nav-icon {
-    color: #fdbe33;
-    transform: rotate(-15deg) scale(1.2);
+/* Solo afecta el puntito cuando el <a> está activo o en hover */
+.navbar-dark .navbar-nav .nav-link:hover .nav-dot,
+.navbar-dark .navbar-nav .nav-link.active .nav-dot {
+    background-color: #fdbe33;
+    transform: scale(1.2);  /* Equivalente al rotate+scale del ícono */
 }
+
 
 
 /*******************************/
@@ -2180,20 +2207,20 @@ a:focus {
     letter-spacing: 1px;
 }*/
 
-.footer .footer-link a {
+/*.footer .footer-link a {
     display: block;
     margin-bottom: 10px;
     color: #ffffff;
     transition: color 0.3s, letter-spacing 0.3s;
     position: relative;
-    padding-left: 24px; /* Espacio para la hoja */
+    padding-left: 24px;
 }
 
 .footer .footer-link a::before {
-    content: "\f06c"; /* Código del ícono fa-leaf */
+    content: "\f06c"; 
     font-family: "Font Awesome 5 Free";
     font-weight: 900;
-    color: #86da3c; /* Color verde natural */
+    color: #86da3c; 
     position: absolute;
     left: 0;
     top: 0;
@@ -2208,7 +2235,41 @@ a:focus {
 
 .footer .footer-link a:hover::before {
     transform: rotate(-15deg) scale(1.2);
+}*/
+
+.footer .footer-link a {
+  display: block;
+  margin-bottom: 10px;
+  color: #ffffff;
+  transition: color 0.3s, letter-spacing 0.3s;
+  position: relative;
+  padding-left: 24px; /* Espacio para el punto */
 }
+
+.footer .footer-link a::before {
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background-color: #86da3c; /* Verde natural */
+  border-radius: 50%; /* Hace el círculo */
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%); /* Centra vertical */
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.footer .footer-link a:hover {
+  color: #fdbe33;
+  letter-spacing: 1px;
+}
+
+.footer .footer-link a:hover::before {
+  transform: translateY(-50%) scale(1.2);
+  background-color: #fdbe33; /* Cambia color del punto al hover */
+}
+
 
 .footer .footer-contact p i {
     width: 25px;

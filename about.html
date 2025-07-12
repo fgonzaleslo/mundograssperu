@@ -103,12 +103,26 @@
                                 <a href="about.html" class="nav-item nav-link active">Nosotros</a>
                                 <a href="contact.html" class="nav-item nav-link">Contacto</a>
                             </div>-->
-                            <div class="navbar-nav mr-auto">
+                            <!--<div class="navbar-nav mr-auto">
                                 <a href="index.html" class="nav-item nav-link"><i class="fas fa-leaf nav-icon"></i> Inicio</a>
                                 <a href="about.html" class="nav-item nav-link active"><i class="fas fa-leaf nav-icon"></i> Nosotros</a>
                                 <a href="service.html" class="nav-item nav-link"><i class="fas fa-leaf nav-icon"></i> Servicios</a>
                                 <a href="contact.html" class="nav-item nav-link"><i class="fas fa-leaf nav-icon"></i> Contacto</a>
-                            </div>
+                            </div>-->
+                                                        <div class="navbar-nav mr-auto">
+    <a href="index.html" class="nav-item nav-link active">
+        <span class="nav-dot"></span> Inicio
+    </a>
+    <a href="about.html" class="nav-item nav-link">
+        <span class="nav-dot"></span> Nosotros
+    </a>
+    <a href="service.html" class="nav-item nav-link">
+        <span class="nav-dot"></span> Servicios
+    </a>
+    <a href="contact.html" class="nav-item nav-link">
+        <span class="nav-dot"></span> Contacto
+    </a>
+</div>
                             <!--<div class="ml-auto">
                                 <a class="btn" href="#">Get A Quote</a>
                             </div>-->
@@ -403,6 +417,69 @@
             }
         }
         </script>
+        <script>
+  // Espera que el DOM cargue
+  document.addEventListener("DOMContentLoaded", function () {
+    // Obtiene el nombre de la página (por ejemplo 'about.html')
+    const path = window.location.pathname.split("/").pop();
+
+    // Selecciona todos los links
+    const links = document.querySelectorAll(".navbar-nav .nav-link");
+
+    links.forEach(link => {
+      // Si el href termina igual que el path de la URL → pone active
+      if (link.getAttribute("href") === path || (path === "" && link.getAttribute("href") === "index.html")) {
+        link.classList.add("active");
+      } else {
+        link.classList.remove("active");
+      }
+    });
+  });
+</script>
+<script>
+  // Cargar el sonido chime bonito
+  const clickSound = new Audio('img/mixkit-page-turn-chime-1106.mp3');
+  clickSound.volume = 0.4; // Ajusta volumen, 0.4 es suave
+
+  const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+
+  navLinks.forEach(link => {
+    link.addEventListener('click', function (e) {
+      e.preventDefault(); // Detiene la navegación inmediata
+
+      clickSound.currentTime = 0; // Reinicia si clickean rápido
+      clickSound.play();
+
+      const href = link.getAttribute('href');
+
+      // Espera 200 ms para dejar sonar el chime
+      setTimeout(() => {
+        window.location.href = href;
+      }, 1000);
+    });
+  });
+</script>
+<script>
+  // Usar versión MP3 optimizada
+  const whooshHover = new Audio('img/mixkit-arrow-whoosh-1491.mp3'); 
+  whooshHover.volume = 0.4; // Puedes ajustar volumen
+
+  // Footer links
+  document.querySelectorAll('.footer-link a').forEach(link => {
+    link.addEventListener('mouseenter', () => {
+      whooshHover.currentTime = 0;
+      whooshHover.play();
+    });
+  });
+
+  // Navbar links
+  document.querySelectorAll('.navbar-nav .nav-link').forEach(link => {
+    link.addEventListener('mouseenter', () => {
+      whooshHover.currentTime = 0;
+      whooshHover.play();
+    });
+  });
+</script>
 
         <!-- JavaScript Libraries -->
         <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
