@@ -120,18 +120,21 @@
     });
     
     
-    // Portfolio isotope and filter
-    var portfolioIsotope = $('.portfolio-container').isotope({
-        itemSelector: '.portfolio-item',
-        layoutMode: 'fitRows'
-    });
+// Portfolio isotope and filter
+var portfolioIsotope = $('.portfolio-container').isotope({
+  itemSelector: '.portfolio-item',
+  layoutMode: 'fitRows',
+  filter: '.first' // 👈 Mostrar solo los de la clase .first al cargar
+});
 
-    $('#portfolio-flters li').on('click', function () {
-        $("#portfolio-flters li").removeClass('filter-active');
-        $(this).addClass('filter-active');
+$('#portfolio-flters li').on('click', function () {
+  $('#portfolio-flters li').removeClass('filter-active');
+  $(this).addClass('filter-active');
 
-        portfolioIsotope.isotope({filter: $(this).data('filter')});
-    });
+  var filterValue = $(this).attr('data-filter');
+  portfolioIsotope.isotope({ filter: filterValue });
+});
+
     
 })(jQuery);
 
