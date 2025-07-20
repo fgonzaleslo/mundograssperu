@@ -2485,6 +2485,101 @@ a:focus {
     color: #ffffff;
 }
 
+.footer-services-title {
+  position: relative;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #fdbe33;
+}
+
+.footer-services-title::after {
+  position: absolute;
+  content: "";
+  width: 120px; /* El doble de 60px */
+  height: 2px;
+  left: 0;
+  bottom: 0;
+  background: #fdbe33;
+}
+
+/* Estilos para el contenedor de servicios */
+.services-container {
+    position: relative;
+}
+
+.services-main-title {
+    position: relative;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    font-size: 20px;
+    font-weight: 600;
+    color: #fdbe33;
+    width: 100%;
+}
+
+.services-main-title::after {
+    position: absolute !important;
+    content: "" !important;
+    width: 300px !important; /* Ajusta este valor según necesites */
+    height: 2px !important;
+    left: 0 !important;
+    bottom: 0 !important;
+    background: #fdbe33 !important;
+}
+
+/* Ajustes para las columnas de servicios */
+.services-container .footer-link {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+/* Asegurar que ambas columnas estén alineadas */
+.services-container .row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.services-container .col-md-6 {
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+/* Estilo forzado para el subrayado extendido */
+.extended-underline {
+    position: relative;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    font-size: 20px;
+    font-weight: 600;
+    color: #fdbe33 !important;
+}
+
+.extended-underline::after {
+    position: absolute !important;
+    content: "" !important;
+    width: 200px !important; /* Ajusta este valor según necesites */
+    height: 2px !important;
+    left: 0 !important;
+    bottom: 0 !important;
+    background: #fdbe33 !important;
+}
+
+/* Alineación vertical de las columnas de servicios */
+.footer-link, .footer-link-secondary {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.footer-link a, .footer-link-secondary a {
+    margin-bottom: 10px;
+}
+
+
 @media (max-width: 768px) {
     .footer .copyright p,
     .footer .copyright .col-md-6:last-child p {
@@ -2710,49 +2805,3 @@ a:focus {
 .whatsapp-float.vibrando {
   animation: vibrar 0.5s ease-in-out;
 }
-
-
-.footer-contact-form {
-  margin-top: 20px;
-}
-
-.footer-contact-form h2 {
-  font-size: 20px;
-  margin-bottom: 15px;
-  color: #fff; /* Ajusta al color de tu footer */
-}
-
-.footer-contact-form form {
-  display: flex;
-  flex-direction: column;
-}
-
-.footer-contact-form input,
-.footer-contact-form textarea {
-  width: 100%;
-  padding: 10px 12px;
-  margin-bottom: 10px;
-  border: none;
-  border-radius: 4px;
-}
-
-.footer-contact-form textarea {
-  min-height: 100px;
-  resize: vertical;
-}
-
-.footer-contact-form button {
-  background: #28a745; /* Verde, cámbialo por tu color corporativo */
-  color: #fff;
-  border: none;
-  padding: 10px 15px;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-.footer-contact-form button:hover {
-  background: #218838; /* Un tono más oscuro */
-}
-
-
